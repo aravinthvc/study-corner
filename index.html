@@ -2138,6 +2138,107 @@ const AR_OPTIONS = [
   "A is false but R is true."
 ];
 
+/* =====================================================================
+   HINDI GRAMMAR SKILL POOL
+   D.A.V. School's real Hindi Periodic Tests are structured completely
+   differently from Maths' — by grammar-skill category (opposites,
+   synonyms, gender, suffix, prefix, rhyming, word-order...) rather than
+   by a mark-tier Part A–D structure. This pool feeds generateHindiPaper()
+   so a Hindi mock paper actually resembles her real Hindi PT, not a
+   relabelled Maths paper. Every item here is sourced from the lessons'
+   own real vocabulary/exercises or the real PT1/PT2 papers — see
+   /docs or the chapter content itself for provenance.
+   ===================================================================== */
+const hindiSkillPool = {
+  opposites: [
+    {word:"सदाचार", answer:"दुराचार", options:["व्यवहार","सच्चाई","दुराचार"]},
+    {word:"झूठ", answer:"सच", options:["सच","क्रोध","दोष"]},
+    {word:"देश", answer:"विदेश", options:["प्रदेश","विदेश","गाँव"]},
+    {word:"जीवन", answer:"मृत्यु", options:["जन्म","मृत्यु","सुख"]},
+    {word:"आशा", answer:"निराशा", options:["उम्मीद","निराशा","खुशी"]},
+    {word:"एकता", answer:"अनेकता", options:["समानता","अनेकता","भिन्नता"]},
+    {word:"मुख्य", answer:"गौण", options:["प्रमुख","गौण","विशेष"]},
+    {word:"प्रशंसा", answer:"निंदा", options:["सम्मान","निंदा","आलोचना"]},
+    {word:"ज्ञात", answer:"अज्ञात", options:["छोटा","अंदर","अज्ञात"]},
+    {word:"जीत", answer:"हार", options:["हार","दूर","पास"]},
+    {word:"शांति", answer:"अशांति", options:["निदान","पतला","अशांति"]}
+  ],
+  synonyms: [
+    {word:"माथा", answer:"मस्तक", options:["मस्तक","चरण","नयन"]},
+    {word:"तन", answer:"शरीर", options:["मन","शरीर","आत्मा"]},
+    {word:"देश", answer:"राष्ट्र", options:["राष्ट्र","प्रदेश","गाँव"]},
+    {word:"दुनिया", answer:"संसार", options:["नगर","समाज","संसार"]},
+    {word:"बादल", answer:"मेघ", options:["मेघ","नदी","पर्वत"]},
+    {word:"भाग्य", answer:"किस्मत", options:["किस्मत","परिश्रम","समय"]},
+    {word:"हवा", answer:"पवन", options:["पवन","जल","अग्नि"]},
+    {word:"घर", answer:"गृह", options:["गृह","पथ","वन"]},
+    {word:"फूल", answer:"सुमन", options:["सुमन","पत्ता","जड़"]},
+    {word:"अन्न", answer:"अनाज", options:["अनाज","फल","जल"]},
+    {word:"द्वार", answer:"दरवाज़ा", options:["खिड़की","दीवार","दरवाज़ा"]}
+  ],
+  meanings: [
+    {word:"डगर", answer:"राह", options:["राह","फूल","बादल"]},
+    {word:"समस्त", answer:"सभी", options:["थोड़ा","सभी","कोई"]},
+    {word:"दैव", answer:"भगवान", options:["दानव","भगवान","भक्ति"]},
+    {word:"नज़दीक", answer:"पास", options:["तरह","नेत्र","पास"]},
+    {word:"डैने", answer:"पंख", options:["पंख","पतंग","धैर्य"]},
+    {word:"सहेजा", answer:"सँभाला", options:["सँभाला","बिगाड़ा","खोया"]},
+    {word:"व्याकुल", answer:"परेशान", options:["परेशान","खुश","शांत"]}
+  ],
+  gender: [
+    {word:"युवक", answer:"युवती", options:["युवती","महिला","बालिका"]},
+    {word:"सेवक", answer:"सेविका", options:["सेविका","स्वामिनी","रानी"]},
+    {word:"शिष्य", answer:"शिष्या", options:["शिक्षिका","छात्रा","शिष्या"]},
+    {word:"राजा", answer:"रानी", options:["रानी","महारानी","राजकुमारी"]},
+    {word:"महारानी", answer:"महाराज", options:["महाराज","राजकुमार","सेनापति"]}
+  ],
+  adjectives: [
+    {noun:"सीप", answer:"सुंदर", options:["सुंदर","गुलाबी","बड़ा"]},
+    {noun:"कमल", answer:"सुंदर", options:["काले","सुंदर","गहरा"]},
+    {noun:"बादल", answer:"काले", options:["काले","चमकीला","गुलाबी"]},
+    {noun:"समुद्र", answer:"गहरा", options:["गहरा","छोटा","सुंदर"]},
+    {noun:"मोती", answer:"चमकीला", options:["चमकीला","काला","पतला"]},
+    {noun:"मुसकान", answer:"मधुर", options:["मधुर","कठोर","ऊँचा"]},
+    {noun:"आवाज़", answer:"कठोर", options:["विशाल","लंबा","कठोर"]}
+  ],
+  suffix: [
+    {base:"परंपरा", suffix:"गत", answer:"परंपरागत"},
+    {base:"भारत", suffix:"ईय", answer:"भारतीय"},
+    {base:"उल्लेख", suffix:"नीय", answer:"उल्लेखनीय"},
+    {base:"महत्व", suffix:"पूर्ण", answer:"महत्वपूर्ण"},
+    {base:"नम्र", suffix:"ता", answer:"नम्रता"},
+    {base:"चतुर", suffix:"ता", answer:"चतुरता"},
+    {base:"कुशल", suffix:"ता", answer:"कुशलता"}
+  ],
+  prefix: [
+    {base:"ज्ञान", prefix:"वि", answer:"विज्ञान"},
+    {base:"देश", prefix:"वि", answer:"विदेश"},
+    {base:"जय", prefix:"वि", answer:"विजय"},
+    {base:"शेष", prefix:"वि", answer:"विशेष"},
+    {base:"जन", prefix:"निर्", answer:"निर्जन"},
+    {base:"बल", prefix:"निर्", answer:"निर्बल"},
+    {base:"धन", prefix:"निर्", answer:"निर्धन"},
+    {base:"दोष", prefix:"निर्", answer:"निर्दोष"}
+  ],
+  meinmain: [
+    {sentence:"___ बचूँगी या मिलूँगी धूल में।", answer:"मैं"},
+    {sentence:"वह उसी ___ जा पड़ी, मोती बनी।", answer:"में"},
+    {sentence:"___ कल ही मुंबई से लौटा हूँ।", answer:"मैं"},
+    {sentence:"किताब बस्ते ___ है।", answer:"में"}
+  ],
+  rhyming: [
+    {word:"धूल", answer:"फूल", options:["फूल","दूर","जाल"]},
+    {word:"घर", answer:"डर", options:["डर","रात","सोना"]},
+    {word:"रात", answer:"बात", options:["बात","दिन","सुबह"]},
+    {word:"मीत", answer:"गीत", options:["गीत","राह","पास"]}
+  ],
+  wordorder: [
+    {jumbled:["हैं","बच्चे","भारत","के","हम"], answer:"हम हैं बच्चे भारत के"},
+    {jumbled:["है","शूरवीर","बनाता","हमको"], answer:"बनाता शूरवीर हमको है"},
+    {jumbled:["चलता","देश","है","संग","हमारा"], answer:"संग देश हमारा चलता है"}
+  ]
+};
+
 /* ===================== STATE ===================== */
 let state = {
   subject: "maths",
@@ -2835,10 +2936,10 @@ function renderSidebar(){
         <span class="num">${i+1}</span><span>${c.title.replace(/^\d+\.\s/,'')}</span>
       </div>
     `).join('') +
-    `<div class="nav-item special ${state.view==='keywords'?'active':''}" data-ch="__keywords">
+    (state.subject === 'maths' ? `<div class="nav-item special ${state.view==='keywords'?'active':''}" data-ch="__keywords">
        <span class="num">\uD83D\uDD11</span><span>Keyword Clues</span>
-     </div>
-     <div class="nav-item special ${state.view==='mocktest'?'active':''}" data-ch="__mock">
+     </div>` : '') +
+    `<div class="nav-item special ${state.view==='mocktest'?'active':''}" data-ch="__mock">
        <span class="num">✎</span><span>Build a mock test</span>
      </div>
      <div class="nav-item special ${state.view==='records'?'active':''}" data-ch="__records">
@@ -3390,20 +3491,26 @@ function renderTestRecordsPage(){
 
 function renderMockTestSetup(){
   const content = document.getElementById('content');
+  const isHindi = state.subject === 'hindi';
+  if(isHindi && state.mockLevel === 'fullterm') state.mockLevel = 'term'; // no 100-mark tier built for Hindi yet
+  const levelOptionsHTML = isHindi ? `
+        <div class="radio-opt ${state.mockLevel==='class'?'on':''}" data-lvl="class"><b>Quick Practice — ~20 marks</b>45 minutes · Grammar sections + comprehension</div>
+        <div class="radio-opt ${state.mockLevel==='term'?'on':''}" data-lvl="term"><b>Periodic Test — ~40 marks</b>1½ hours · Matches the real DAV Hindi Periodic Test format</div>
+  ` : `
+        <div class="radio-opt ${state.mockLevel==='class'?'on':''}" data-lvl="class"><b>Quick Practice — 20 marks</b>45 minutes · Parts A–D</div>
+        <div class="radio-opt ${state.mockLevel==='term'?'on':''}" data-lvl="term"><b>Periodic Test — 40 marks</b>1½ hours · Matches the real DAV Periodic Test format</div>
+        <div class="radio-opt ${state.mockLevel==='fullterm'?'on':''}" data-lvl="fullterm"><b>Full Term Exam — 100 marks</b>2½ hours · Larger paper, same Part A–D structure scaled up</div>
+  `;
   content.innerHTML = `
     <div class="setup-card">
       <h3>1. Choose chapters to include</h3>
-      <p>Tick exactly the chapters listed on the school's Periodic Test portion sheet — the paper will pull a balanced mix of MCQs, short and long answers from just those chapters.</p>
+      <p>Tick exactly the chapters listed on the school's Periodic Test portion sheet — the paper will pull a balanced mix of questions from just those chapters.</p>
       <div class="chip-actions"><span id="selAll">Select all</span><span id="selNone">Clear all</span></div>
       <div class="chip-row" id="chapterChips">
         ${chapters.map(c=>`<div class="chip ${state.mockChapters.includes(c.id)?'on':''}" data-ch="${c.id}">${c.title.replace(/^\d+\.\s/,'')}</div>`).join('')}
       </div>
       <h3>2. Choose paper length</h3>
-      <div class="radio-row" id="levelRow">
-        <div class="radio-opt ${state.mockLevel==='class'?'on':''}" data-lvl="class"><b>Quick Practice — 20 marks</b>45 minutes · Parts A–D</div>
-        <div class="radio-opt ${state.mockLevel==='term'?'on':''}" data-lvl="term"><b>Periodic Test — 40 marks</b>1½ hours · Matches the real DAV Periodic Test format</div>
-        <div class="radio-opt ${state.mockLevel==='fullterm'?'on':''}" data-lvl="fullterm"><b>Full Term Exam — 100 marks</b>2½ hours · Larger paper, same Part A–D structure scaled up</div>
-      </div>
+      <div class="radio-row" id="levelRow">${levelOptionsHTML}</div>
       <button class="btn" id="genBtn">Generate Test Paper</button>
     </div>
     <div id="paperHolder"></div>
@@ -3433,7 +3540,7 @@ function renderMockTestSetup(){
       opt.classList.add('on');
     });
   });
-  document.getElementById('genBtn').addEventListener('click', generatePaper);
+  document.getElementById('genBtn').addEventListener('click', isHindi ? generateHindiPaper : generatePaper);
   wireReferenceSection('general');
 }
 
@@ -3539,6 +3646,162 @@ function generatePaper(){
   `;
   document.getElementById('printBtn').addEventListener('click', ()=>window.print());
   document.getElementById('regenBtn').addEventListener('click', generatePaper);
+  document.getElementById('logResultBtn').addEventListener('click', renderLogResultForm);
+  document.getElementById('paperHolder').scrollIntoView({behavior:'smooth'});
+}
+
+/* Normalizes one hindiSkillPool item into a common {prompt, answer, options}
+   shape so the paper renderer and answer key don't need per-category branches. */
+function normalizeHindiItem(cat, it){
+  switch(cat){
+    case 'opposites': return { prompt: `${it.word} का विलोम (opposite) है —`, answer: it.answer, options: it.options };
+    case 'synonyms': return { prompt: `${it.word} का पर्यायवाची (synonym) है —`, answer: it.answer, options: it.options };
+    case 'meanings': return { prompt: `${it.word} का अर्थ है —`, answer: it.answer, options: it.options };
+    case 'gender': return { prompt: `${it.word} का लिंग बदलिए (change the gender) —`, answer: it.answer, options: it.options };
+    case 'rhyming': return { prompt: `${it.word} से तुकांत (rhyming) शब्द है —`, answer: it.answer, options: it.options };
+    case 'adjectives': return { prompt: `उचित विशेषण चुनिए — ___ ${it.noun}`, answer: it.answer, options: it.options };
+    case 'suffix': return { prompt: `${it.base} + ${it.suffix} = ____________`, answer: it.answer, options: null };
+    case 'prefix': return { prompt: `${it.prefix} + ${it.base} = ____________`, answer: it.answer, options: null };
+    case 'meinmain': return { prompt: it.sentence, answer: it.answer, options: null };
+    case 'wordorder': return { prompt: `शब्दों को सही क्रम में लगाइए — ${it.jumbled.join(' / ')}`, answer: it.answer, options: null };
+    default: return { prompt: '', answer: '', options: null };
+  }
+}
+
+const HINDI_SKILL_LABELS = {
+  opposites: "विपरीतार्थक शब्द (Opposites)",
+  synonyms: "पर्यायवाची शब्द (Synonyms)",
+  meanings: "शब्द-अर्थ (Word Meanings)",
+  gender: "लिंग बदलिए (Gender Change)",
+  adjectives: "उचित विशेषण चुनिए (Adjectives)",
+  suffix: "प्रत्यय लगाकर शब्द बनाइए (Suffix)",
+  prefix: "उपसर्ग लगाकर शब्द बनाइए (Prefix)",
+  meinmain: "में, मैं भरकर वाक्य पूरा कीजिए",
+  rhyming: "तुकांत शब्द (Rhyming Words)",
+  wordorder: "शब्दों को सही क्रम में लगाइए (Word Order)"
+};
+
+function generateHindiPaper(){
+  // Hindi's real Periodic Test is structured by grammar-skill category, not
+  // by a Part A–D mark-tier the way Maths is — confirmed against Kayalini's
+  // actual PT1 and PT2 papers (both 40 marks / 1.5 hrs, both totalling
+  // exactly 40 across: reading comprehension 5, several grammar sub-parts,
+  // MCQ-from-lesson 4, one-sentence answers 4, brief answers 4).
+  const isFullPT = state.mockLevel === 'term';
+  const selected = chapters.filter(c=>state.mockChapters.includes(c.id));
+  const chNames = selected.map(c=>c.title.replace(/^\d+\.\s/,'')).join(', ');
+
+  // Section I — reading comprehension. Never reproduces the copyrighted
+  // poem/story text itself, only tests understanding of it — same as how
+  // the real PT pairs a short passage with questions, except we ask
+  // directly about the lesson rather than transcribing the passage.
+  const compPool = selected.flatMap(c => c.practice.filter(q=>q.type==='short' && q.marks>=2).map(q=>({...q, chapter:c.title})));
+  const wantComp = isFullPT ? 5 : 2;
+  const secComp = shuffle(compPool).slice(0, wantComp);
+
+  const grammarCats = isFullPT
+    ? [['opposites',4], ['synonyms',3], ['meanings',3], ['gender',3], ['adjectives',3], ['suffix',3], ['prefix',2], ['meinmain',2]]
+    : [['opposites',3], ['synonyms',2], ['gender',2], ['meanings',2], ['suffix',2]];
+  const grammarSections = grammarCats.map(([cat,count])=>({
+    cat, items: shuffle(hindiSkillPool[cat]).slice(0, count).map(it=>normalizeHindiItem(cat, it))
+  })).filter(g=>g.items.length);
+
+  const mcqPool = selected.flatMap(c => c.practice.filter(q=>q.type==='mcq').map(q=>({...q, chapter:c.title})));
+  const wantMcq = isFullPT ? 4 : 2;
+  const secMcq = shuffle(mcqPool).slice(0, wantMcq);
+
+  const shortPool = selected.flatMap(c => c.practice.filter(q=>q.type==='short').map(q=>({...q, chapter:c.title})));
+  const usedQ1 = new Set(secComp.map(q=>q.q));
+  const wantOneSent = isFullPT ? 4 : 2;
+  const secOneSent = shuffle(shortPool.filter(q=>!usedQ1.has(q.q))).slice(0, wantOneSent);
+
+  const usedQ2 = new Set([...secComp, ...secOneSent].map(q=>q.q));
+  const wantBrief = isFullPT ? 2 : 1;
+  const secBrief = shuffle(shortPool.filter(q=>!usedQ2.has(q.q) && q.marks>=2)).slice(0, wantBrief);
+
+  const grammarMarks = grammarSections.reduce((s,g)=>s+g.items.length,0);
+  const total = secComp.length*1 + grammarMarks*1 + secMcq.length*1 + secOneSent.length*1 + secBrief.length*2;
+  const time = isFullPT ? '1 hour 30 minutes' : '45 minutes';
+
+  lastGeneratedPaper = {
+    chapterIds: selected.map(c=>c.id),
+    chapterNames: chNames,
+    maxMarks: total,
+    level: state.mockLevel
+  };
+
+  const wantGrammar = grammarCats.reduce((s,[,c])=>s+c,0);
+  const wantTotal = wantComp + wantGrammar + wantMcq + wantOneSent + wantBrief;
+  const gotTotal = secComp.length + grammarMarks + secMcq.length + secOneSent.length + secBrief.length;
+  let warn = '';
+  if(gotTotal < wantTotal){
+    warn = `<div class="paper-warn">Only ${gotTotal} of ${wantTotal} questions could be filled from the selected chapters (max marks came to ${total}) — select more chapters for a fuller paper.</div>`;
+  }
+
+  let qNum = 0;
+  const optRow = opts => opts ? `<div class="opts">${opts.map((o,i)=>`(${String.fromCharCode(97+i)}) ${o}`).join('&nbsp;&nbsp;&nbsp;')}</div>` : '';
+
+  const compHTML = secComp.length ? `<div class="paper-section-title">I. गद्यांश-आधारित प्रश्न (Based on your lesson reading) <span class="pm">[${secComp.length}]</span></div>` +
+    secComp.map(q=>{ qNum++; return `<div class="paper-q">${qNum}. ${q.q}</div>`; }).join('') : '';
+
+  const grammarHTML = grammarSections.length ? `<div class="paper-section-title">II. व्याकरण (Grammar)</div>` +
+    grammarSections.map((g,gi)=>{
+      const letter = "अआइईउऊऋए"[gi] || String.fromCharCode(2309+gi);
+      return `<div class="paper-subsection">${letter}. ${HINDI_SKILL_LABELS[g.cat]} <span class="pm">[${g.items.length}]</span></div>` +
+        g.items.map((it,i)=>{ qNum++; return `<div class="paper-q">${i+1}. ${it.prompt}${optRow(it.options)}</div>`; }).join('');
+    }).join('') : '';
+
+  const mcqHTML = secMcq.length ? `<div class="paper-section-title">III. सही विकल्प चुनिए (Choose the correct option) <span class="pm">[${secMcq.length}]</span></div>` +
+    secMcq.map(q=>{ qNum++; return `<div class="paper-q">${qNum}. ${q.q}${optRow(q.options)}</div>`; }).join('') : '';
+
+  const oneSentHTML = secOneSent.length ? `<div class="paper-section-title">IV. एक वाक्य में उत्तर दीजिए (Answer in one sentence) <span class="pm">[${secOneSent.length}]</span></div>` +
+    secOneSent.map(q=>{ qNum++; return `<div class="paper-q">${qNum}. ${q.q}</div>`; }).join('') : '';
+
+  const briefHTML = secBrief.length ? `<div class="paper-section-title">V. संक्षेप में उत्तर दीजिए (Answer in brief) <span class="pm">[${secBrief.length}\u00D72]</span></div>` +
+    secBrief.map(q=>{ qNum++; return `<div class="paper-q">${qNum}. ${q.q}</div>`; }).join('') : '';
+
+  const keyItems = [];
+  secComp.forEach(q=>keyItems.push(`<li>${q.q} — ${Array.isArray(q.answer)?q.answer[0]:q.answer}</li>`));
+  grammarSections.forEach(g=>g.items.forEach(it=>keyItems.push(`<li>${it.prompt.replace('____________','').trim()} — <b>${it.answer}</b></li>`)));
+  secMcq.forEach(q=>keyItems.push(`<li>${q.q} — <b>${q.options[q.answer]}</b> <i>(${q.explain})</i></li>`));
+  secOneSent.forEach(q=>keyItems.push(`<li>${q.q} — ${Array.isArray(q.answer)?q.answer[0]:q.answer}</li>`));
+  secBrief.forEach(q=>keyItems.push(`<li>${q.q} — ${Array.isArray(q.answer)?q.answer[0]:q.answer}</li>`));
+
+  const paperHTML = `
+    <div class="paper" id="paperContent">
+      <div class="paper-head">
+        <h2>D.A.V. School, Adambakkam</h2>
+        <div class="sub">${isFullPT ? 'Periodic Test' : 'Quick Practice'} &middot; II Language \u2014 Hindi &middot; Class V</div>
+      </div>
+      <div class="paper-info"><span>Time: ${time}</span><span>Max. Marks: ${total}</span></div>
+      <div class="paper-instr">
+        General Instructions: सभी प्रश्न अनिवार्य हैं। (All questions are compulsory.)
+        <br><br><b>Chapters covered:</b> ${chNames}
+      </div>
+      ${compHTML}
+      ${grammarHTML}
+      ${mcqHTML}
+      ${oneSentHTML}
+      ${briefHTML}
+      <details class="answer-key">
+        <summary>Show Answer Key &amp; Explanations (for parents/checking)</summary>
+        <ul>${keyItems.join('')}</ul>
+      </details>
+    </div>
+  `;
+
+  document.getElementById('paperHolder').innerHTML = `
+    ${warn}
+    <div class="paper-actions">
+      <button class="btn" id="printBtn">Print / Save as PDF</button>
+      <button class="btn secondary" id="regenBtn">Generate a Different Paper</button>
+      <button class="btn secondary" id="logResultBtn">Log Result After Grading</button>
+    </div>
+    <div id="logResultHolder"></div>
+    ${paperHTML}
+  `;
+  document.getElementById('printBtn').addEventListener('click', ()=>window.print());
+  document.getElementById('regenBtn').addEventListener('click', generateHindiPaper);
   document.getElementById('logResultBtn').addEventListener('click', renderLogResultForm);
   document.getElementById('paperHolder').scrollIntoView({behavior:'smooth'});
 }
