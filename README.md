@@ -4,7 +4,7 @@ An offline-first, interactive study tool for CBSE Class 5 Mathematics
 (Collins Perfect Maths 5, 2nd Edition) — built for Kayalini, designed as a
 reusable framework for any board/grade/subject.
 
-**Live site:** _(add the Vercel URL here once deployed — see below)_
+**Live site:** study-corner-a9jgse989-nutri-gap.vercel.app
 
 ## What's in here
 
