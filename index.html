@@ -258,6 +258,12 @@
   .clue-toggle:hover{background:#FCEFD8;}
   .clue-text{display:none; margin-top:8px; padding:10px 14px; background:#FFF8EA; border-left:3px solid var(--marigold); border-radius:6px; font-size:13.5px; color:var(--ink-soft); line-height:1.5;}
   .clue-text.show{display:block;}
+  .meaning-block{margin-top:8px;}
+  .meaning-toggle{display:inline-block; font-size:13px; color:var(--peacock); cursor:pointer; font-weight:600; padding:5px 12px; border:1.5px dashed #A9CFC5; border-radius:20px; background:#F2F9F6;}
+  .meaning-toggle:hover{background:#E6F3EE;}
+  .meaning-text{display:none; margin-top:8px; padding:10px 14px; background:#F2F9F6; border-left:3px solid var(--peacock); border-radius:6px; font-size:13.5px; color:var(--ink-soft); line-height:1.5;}
+  .meaning-text.show{display:block;}
+  .watch-translation{margin-top:6px; font-size:13px; font-style:italic; color:var(--ink-soft); text-align:center; opacity:0.85;}
 
   .kw-grid{display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-top:4px;}
   .kw-panel{border:1.5px solid var(--line); border-top-width:4px; border-radius:10px; padding:16px 18px; background:#FCFBF7;}
@@ -1583,20 +1589,20 @@ const chapters_hindi_g5_cbse = [
       {type:"mcq", marks:1, q:"कविता के अनुसार, हमको बल किससे मिलता है?", options:["पौष्टिक खाने से","जंक फ़ूड से","माँ से","भारत से"], answer:3, explain:"The poem's closing lines say हम रहें जहाँ भारत से ही, हम सबको बल मिलता है — wherever we are, it's India that gives us strength."},
       {type:"short", marks:2, q:"\"सदाचार\" का विलोम (opposite) लिखिए।", answer:["दुराचार","duraachaar"], explain:"सदाचार (good conduct) and दुराचार (bad conduct) are opposites — directly from the lesson's own विलोम exercise."},
       {type:"mcq", marks:1, q:"\"माथा\" का सही पर्यायवाची (synonym) कौन सा है?", options:["मस्तक","चरण","नयन","कर"], answer:0, explain:"मस्तक and ललाट both mean \"forehead\", same as माथा — the other options mean feet, eyes, and hand."},
-      {type:"short", marks:2, q:"कविता के अनुसार भारतीय किस डगर पर चलते हैं? (According to the poem, which path do Indians walk on?)", answer:["सच्चाई की डगर पर","truth's path"], explain:"The poem says सच्चाई की डगर पर ही, हरदम हमें चलाता है — the path of truth guides us always."},
-      {type:"short", marks:2, q:"भारत योग्य लोगों को कहाँ भेजता है, और वे वहाँ क्या करते हैं? (Where does India send its capable people, and what do they do there?)", answer:"India sends capable people all over the world, and they make the country's name shine/proud there", explain:"The poem says कितने ही योग्य सपूतों को, सारी दुनिया में भेजा है — India sends its worthy children across the world, where they bring it honour."},
+      {type:"short", marks:2, q:"कविता के अनुसार भारतीय किस डगर पर चलते हैं?", qEN:"According to the poem, which path do Indians walk on?", answer:["सच्चाई की डगर पर","truth's path"], explain:"The poem says सच्चाई की डगर पर ही, हरदम हमें चलाता है — the path of truth guides us always."},
+      {type:"short", marks:2, q:"भारत योग्य लोगों को कहाँ भेजता है, और वे वहाँ क्या करते हैं?", qEN:"Where does India send its capable people, and what do they do there?", answer:"India sends capable people all over the world, and they make the country's name shine/proud there", explain:"The poem says कितने ही योग्य सपूतों को, सारी दुनिया में भेजा है — India sends its worthy children across the world, where they bring it honour."},
       {type:"mcq", marks:1, q:"\"रात\" शब्द के साथ तुकांत (rhyming) करने वाला शब्द कौन सा है?", options:["बात","दिन","सुबह"], answer:0, explain:"रात और बात दोनों -आत ध्वनि पर समाप्त होते हैं, इसलिए ये तुकांत शब्द हैं — both end in the same \"-aat\" sound."},
       {type:"short", marks:2, q:"शब्दों को सही क्रम में लगाकर कविता की पंक्ति बनाइए: चलता / देश / है / संग / हमारा", answer:["संग देश हमारा चलता है","sang desh hamara chalta hai"], explain:"This is the poem's own title line, rebuilt from its jumbled words — संग देश हमारा चलता है।"}
     ],
     watch: { lessons: [
       { title: "\u092a\u0930\u094d\u092f\u093e\u092f\u0935\u093e\u091a\u0940 \u0936\u092c\u094d\u0926 (Synonyms)", scenes: [
-        { caption: "हिंदी में कई शब्दों के एक से अधिक पर्यायवाची शब्द होते हैं।",
+        { caption: "हिंदी में कई शब्दों के एक से अधिक पर्यायवाची शब्द होते हैं।", translation: "Many Hindi words have more than one synonym.",
           html: "<div style=\"text-align:center;font-size:20px;font-weight:600;color:#1a4d3e;\">पर्यायवाची शब्द</div><div style=\"text-align:center;font-size:14px;color:#999;margin-top:4px;\">Synonyms \u2014 same meaning, different word</div>" },
-        { caption: "माथा का पर्यायवाची है मस्तक, और ललाट भी।",
+        { caption: "माथा का पर्यायवाची है मस्तक, और ललाट भी।", translation: "The synonym for माथा is मस्तक, and also ललाट.",
           html: "<div style=\"display:flex;gap:16px;justify-content:center;align-items:center;\"><div style=\"font-size:24px;font-weight:700;\">माथा</div><div style=\"font-size:18px;color:#999;\">=</div><div style=\"font-size:24px;font-weight:700;color:#1a4d3e;\">मस्तक</div><div style=\"font-size:18px;color:#999;\">=</div><div style=\"font-size:24px;font-weight:700;color:#b5442e;\">ललाट</div></div><div style=\"text-align:center;margin-top:8px;color:#666;\">all mean \"forehead\"</div>" },
-        { caption: "तन का पर्यायवाची है शरीर, और देह भी।",
+        { caption: "तन का पर्यायवाची है शरीर, और देह भी।", translation: "The synonym for तन is शरीर, and also देह.",
           html: "<div style=\"display:flex;gap:16px;justify-content:center;align-items:center;\"><div style=\"font-size:24px;font-weight:700;\">तन</div><div style=\"font-size:18px;color:#999;\">=</div><div style=\"font-size:24px;font-weight:700;color:#1a4d3e;\">शरीर</div><div style=\"font-size:18px;color:#999;\">=</div><div style=\"font-size:24px;font-weight:700;color:#b5442e;\">देह</div></div><div style=\"text-align:center;margin-top:8px;color:#666;\">all mean \"body\"</div>" },
-        { caption: "देश का पर्यायवाची है राष्ट्र, और वतन भी।",
+        { caption: "देश का पर्यायवाची है राष्ट्र, और वतन भी।", translation: "The synonym for देश is राष्ट्र, and also वतन.",
           html: "<div style=\"display:flex;gap:16px;justify-content:center;align-items:center;\"><div style=\"font-size:24px;font-weight:700;\">देश</div><div style=\"font-size:18px;color:#999;\">=</div><div style=\"font-size:24px;font-weight:700;color:#1a4d3e;\">राष्ट्र</div><div style=\"font-size:18px;color:#999;\">=</div><div style=\"font-size:24px;font-weight:700;color:#b5442e;\">वतन</div></div><div style=\"text-align:center;margin-top:8px;color:#666;\">all mean \"country\"</div>" }
       ]}
     ]}
@@ -1613,8 +1619,8 @@ const chapters_hindi_g5_cbse = [
       "<b>Prefix (उपसर्ग) वि / निर् \u2014 real examples from the book:</b> वि+ज्ञान=विज्ञान (science); वि+देश=विदेश (foreign land); वि+जय=विजय (victory); निर्+जन=निर्जन (deserted); निर्+बल=निर्बल (weak); निर्+धन=निर्धन (poor)."
     ],
     practice: [
-      {type:"short", marks:2, q:"पशु-पक्षी और प्रजा क्यों व्याकुल थे? (Why were the animals, birds, and people so distressed?)", answer:["भयंकर सूखा पड़ा था, वर्षा नहीं हुई थी","severe drought, no rain"], explain:"The city was struck by a terrible drought — the land had cracked and there had been no rain for two to three years, leaving everyone desperate."},
-      {type:"short", marks:3, q:"सुप्रिया कौन थी, और उसने बुद्ध से क्या कहा? (Who was Supriya, and what did she say to Buddha?)", answer:"she was a poor woman, the daughter of Anathpindak, and she promised to take responsibility for bringing grain to every home in the city", explain:"Despite being the poorest person there, Supriya stepped forward and promised नगर के हर आँगन में अनाज पहुँचाने का भार मैं लेती हूँ — trusting in people's compassion, not her own wealth."},
+      {type:"short", marks:2, q:"पशु-पक्षी और प्रजा क्यों व्याकुल थे?", qEN:"Why were the animals, birds, and people so distressed?", answer:["भयंकर सूखा पड़ा था, वर्षा नहीं हुई थी","severe drought, no rain"], explain:"The city was struck by a terrible drought — the land had cracked and there had been no rain for two to three years, leaving everyone desperate."},
+      {type:"short", marks:3, q:"सुप्रिया कौन थी, और उसने बुद्ध से क्या कहा?", qEN:"Who was Supriya, and what did she say to Buddha?", answer:"she was a poor woman, the daughter of Anathpindak, and she promised to take responsibility for bringing grain to every home in the city", explain:"Despite being the poorest person there, Supriya stepped forward and promised नगर के हर आँगन में अनाज पहुँचाने का भार मैं लेती हूँ — trusting in people's compassion, not her own wealth."},
       {type:"mcq", marks:1, q:"पाठ में 'तथागत' शब्द का प्रयोग किसके लिए हुआ है?", options:["जयसेन","महात्मा बुद्ध","धर्मपाल","अनाथपिंडद"], answer:1, explain:"तथागत is used in the lesson as another respectful name for महात्मा बुद्ध (Buddha)."},
       {type:"mcq", marks:1, q:"सेठ धर्मपाल को अकाल के अलावा दूसरी चिंता क्या थी?", options:["भूख-प्यास से व्याकुल पक्षियों की","बच्चों की शिक्षा की","जन-जन तक अनाज पहुँचाने की","राज्य का कर चुकाने की"], answer:3, explain:"Dharmapal admitted he was also worried about how he'd pay the kingdom's tax this year, on top of the famine."},
       {type:"short", marks:2, q:"\"कलेजा फटना\" मुहावरे का अर्थ लिखिए।", answer:["बहुत दुखी होना","very sorrowful"], explain:"This idiom means to be extremely sorrowful — used to describe how deeply Buddha felt the suffering of his people."},
@@ -1622,13 +1628,13 @@ const chapters_hindi_g5_cbse = [
     ],
     watch: { lessons: [
       { title: "\u0932\u093f\u0902\u0917 \u092a\u0930\u093f\u0935\u0930\u094d\u0924\u0928 (Gender Change)", scenes: [
-        { caption: "हिंदी में कई शब्द पुल्लिंग से स्त्रीलिंग में बदलते हैं, हर शब्द का अपना नियम होता है।",
+        { caption: "हिंदी में कई शब्द पुल्लिंग से स्त्रीलिंग में बदलते हैं, हर शब्द का अपना नियम होता है।", translation: "In Hindi, many words change from masculine to feminine — each word has its own rule.",
           html: "<div style=\"text-align:center;font-size:20px;font-weight:600;color:#1a4d3e;\">लिंग परिवर्तन</div><div style=\"text-align:center;font-size:14px;color:#999;margin-top:4px;\">Gender Change</div>" },
-        { caption: "युवक का स्त्रीलिंग है युवती।",
+        { caption: "युवक का स्त्रीलिंग है युवती।", translation: "The feminine form of युवक is युवती.",
           html: "<div style=\"display:flex;gap:20px;justify-content:center;align-items:center;\"><div style=\"font-size:26px;font-weight:700;\">युवक</div><div style=\"font-size:20px;color:#999;\">→</div><div style=\"font-size:26px;font-weight:700;color:#b5442e;\">युवती</div></div><div style=\"text-align:center;margin-top:8px;color:#666;\">young man → young woman</div>" },
-        { caption: "सेवक का स्त्रीलिंग है सेविका।",
+        { caption: "सेवक का स्त्रीलिंग है सेविका।", translation: "The feminine form of सेवक is सेविका.",
           html: "<div style=\"display:flex;gap:20px;justify-content:center;align-items:center;\"><div style=\"font-size:26px;font-weight:700;\">सेवक</div><div style=\"font-size:20px;color:#999;\">→</div><div style=\"font-size:26px;font-weight:700;color:#b5442e;\">सेविका</div></div><div style=\"text-align:center;margin-top:8px;color:#666;\">servant (m) → servant (f)</div>" },
-        { caption: "राजा का स्त्रीलिंग है रानी, यह शब्द पूरी तरह बदल जाता है।",
+        { caption: "राजा का स्त्रीलिंग है रानी, यह शब्द पूरी तरह बदल जाता है।", translation: "The feminine form of राजा is रानी — this word changes completely.",
           html: "<div style=\"display:flex;gap:20px;justify-content:center;align-items:center;\"><div style=\"font-size:26px;font-weight:700;\">राजा</div><div style=\"font-size:20px;color:#999;\">→</div><div style=\"font-size:26px;font-weight:700;color:#b5442e;\">रानी</div></div><div style=\"text-align:center;margin-top:8px;color:#666;\">king → queen \u2014 a completely different word</div>" }
       ]}
     ]}
@@ -1648,22 +1654,22 @@ const chapters_hindi_g5_cbse = [
       "<b>Pronoun (\u0938\u0930\u094d\u0935\u0928\u093e\u092e):</b> \u092e\u0948\u0902 (I), \u0924\u0942/\u0924\u0941\u092e (you), \u0935\u0939 (he/she/it), \u0939\u092e (we), \u0935\u0947 (they)."
     ],
     practice: [
-      {type:"short", marks:2, q:"फूँक से बजाए जाने वाले वाद्य-यंत्र कौन-कौन से हैं? (Which instruments from the lesson are played by blowing?)", answer:["बाँसुरी और शहनाई","बांसुरी, शहनाई"], explain:"Both बाँसुरी (flute) and शहनाई (shehnai) are played by blowing air through them — फूँक से बजाना."},
-      {type:"mcq", marks:1, q:"संतूर का भारतीय नाम क्या है? (What is the Indian name for the santoor, according to the lesson?)", options:["शततंत्री वीणा","सरस्वती वीणा","रुद्र वीणा","तानपूरा"], answer:0, explain:"The lesson explains संतूर was originally called शततंत्री वीणा, meaning \"the veena with a hundred strings\", later renamed संतूर through Persian influence."},
+      {type:"short", marks:2, q:"फूँक से बजाए जाने वाले वाद्य-यंत्र कौन-कौन से हैं?", qEN:"Which instruments from the lesson are played by blowing?", answer:["बाँसुरी और शहनाई","बांसुरी, शहनाई"], explain:"Both बाँसुरी (flute) and शहनाई (shehnai) are played by blowing air through them — फूँक से बजाना."},
+      {type:"mcq", marks:1, q:"संतूर का भारतीय नाम क्या है?", qEN:"What is the Indian name for the santoor, according to the lesson?", options:["शततंत्री वीणा","सरस्वती वीणा","रुद्र वीणा","तानपूरा"], answer:0, explain:"The lesson explains संतूर was originally called शततंत्री वीणा, meaning \"the veena with a hundred strings\", later renamed संतूर through Persian influence."},
       {type:"mcq", marks:1, q:"पंडित रविशंकर और उस्ताद लियाकत खाँ ___ वादक हैं।", options:["सितार","तबला","शहनाई","बाँसुरी"], answer:0, explain:"The lesson names Pandit Ravi Shankar and Ustad Liyakat Khan among the great सितार players."},
       {type:"mcq", marks:1, q:"बड़े आकार के तबले को क्या कहा जाता है?", options:["दायाँ","बायाँ","डमरू","ढोलक"], answer:1, explain:"The larger of the two tabla drums, played with the left hand, is called बायाँ; the smaller one played with the right hand is दायाँ."},
       {type:"mcq", marks:1, q:"सही/गलत: उस्ताद बिस्मिल्ला खाँ विश्व के सर्वश्रेष्ठ शहनाईवादक माने जाते हैं।", options:["सही","गलत"], answer:0, explain:"The lesson states this directly — Ustad Bismillah Khan is considered the world's finest shehnai player."},
-      {type:"short", marks:2, q:"संतूर अनोखा वाद्य-यंत्र क्यों माना जाता है? (According to the lesson, why is the santoor considered an unusual instrument?)", answer:"it is a stringed instrument (tar ka saaz) but is played with small wooden sticks, unlike most string instruments played by plucking", explain:"The lesson highlights that despite being a तार का साज (string instrument), it's played by striking with small wooden sticks (छड़ों) rather than being plucked — that contradiction is what makes it अनोखा (unusual)."}
+      {type:"short", marks:2, q:"संतूर अनोखा वाद्य-यंत्र क्यों माना जाता है?", qEN:"According to the lesson, why is the santoor considered an unusual instrument?", answer:"it is a stringed instrument (tar ka saaz) but is played with small wooden sticks, unlike most string instruments played by plucking", explain:"The lesson highlights that despite being a तार का साज (string instrument), it's played by striking with small wooden sticks (छड़ों) rather than being plucked — that contradiction is what makes it अनोखा (unusual)."}
     ],
     watch: { lessons: [
       { title: "\u0938\u0902\u091c\u094d\u091e\u093e \u0915\u0947 \u092d\u0947\u0926 (Types of Noun)", scenes: [
-        { caption: "आज हम सीखेंगे संज्ञा के पाँच भेद।",
+        { caption: "आज हम सीखेंगे संज्ञा के पाँच भेद।", translation: "Today we will learn the five types of noun.",
           html: "<div style=\"text-align:center;font-size:22px;font-weight:600;color:#1a4d3e;\">\u0938\u0902\u091c\u094d\u091e\u093e \u0915\u0947 \u092d\u0947\u0926</div><div style=\"text-align:center;font-size:14px;color:#999;margin-top:4px;\">Types of Noun \u2014 five kinds</div>" },
-        { caption: "राम एक व्यक्तिवाचक संज्ञा है, क्योंकि यह एक विशेष व्यक्ति का नाम है। दिल्ली भी व्यक्तिवाचक संज्ञा है, क्योंकि यह एक विशेष स्थान का नाम है।",
+        { caption: "राम एक व्यक्तिवाचक संज्ञा है, क्योंकि यह एक विशेष व्यक्ति का नाम है। दिल्ली भी व्यक्तिवाचक संज्ञा है, क्योंकि यह एक विशेष स्थान का नाम है।", translation: "राम is a proper noun, because it's the name of a specific person. दिल्ली is also a proper noun, because it's the name of a specific place.",
           html: "<div style=\"display:flex;gap:24px;justify-content:center;\"><div style=\"background:#fdf3e0;padding:16px 22px;border-radius:10px;text-align:center;\"><div style=\"font-size:20px;font-weight:700;\">राम</div><div style=\"font-size:12px;color:#666;\">a specific person</div></div><div style=\"background:#fdf3e0;padding:16px 22px;border-radius:10px;text-align:center;\"><div style=\"font-size:20px;font-weight:700;\">दिल्ली</div><div style=\"font-size:12px;color:#666;\">a specific place</div></div></div><div style=\"text-align:center;margin-top:10px;font-weight:600;color:#1a4d3e;\">व्यक्तिवाचक संज्ञा = Proper Noun</div>" },
-        { caption: "लड़का और शहर जातिवाचक संज्ञा हैं, क्योंकि ये किसी भी लड़के या किसी भी शहर के लिए प्रयोग होते हैं।",
+        { caption: "लड़का और शहर जातिवाचक संज्ञा हैं, क्योंकि ये किसी भी लड़के या किसी भी शहर के लिए प्रयोग होते हैं।", translation: "लड़का and शहर are common nouns, because they can be used for any boy or any city.",
           html: "<div style=\"display:flex;gap:24px;justify-content:center;\"><div style=\"background:#e8f0ec;padding:16px 22px;border-radius:10px;text-align:center;\"><div style=\"font-size:20px;font-weight:700;\">लड़का</div><div style=\"font-size:12px;color:#666;\">any boy</div></div><div style=\"background:#e8f0ec;padding:16px 22px;border-radius:10px;text-align:center;\"><div style=\"font-size:20px;font-weight:700;\">शहर</div><div style=\"font-size:12px;color:#666;\">any city</div></div></div><div style=\"text-align:center;margin-top:10px;font-weight:600;color:#1a4d3e;\">जातिवाचक संज्ञा = Common Noun</div>" },
-        { caption: "ईमानदारी और मिठास भाववाचक संज्ञा हैं। इन्हें हम छू नहीं सकते, फिर भी ये एक भाव या गुण को दर्शाते हैं।",
+        { caption: "ईमानदारी और मिठास भाववाचक संज्ञा हैं। इन्हें हम छू नहीं सकते, फिर भी ये एक भाव या गुण को दर्शाते हैं।", translation: "ईमानदारी and मिठास are abstract nouns. We cannot touch them, yet they represent a feeling or quality.",
           html: "<div style=\"display:flex;gap:24px;justify-content:center;\"><div style=\"background:#f0e6f6;padding:16px 22px;border-radius:10px;text-align:center;\"><div style=\"font-size:20px;font-weight:700;\">ईमानदारी</div><div style=\"font-size:12px;color:#666;\">honesty \u2014 a quality</div></div><div style=\"background:#f0e6f6;padding:16px 22px;border-radius:10px;text-align:center;\"><div style=\"font-size:20px;font-weight:700;\">मिठास</div><div style=\"font-size:12px;color:#666;\">sweetness \u2014 a quality</div></div></div><div style=\"text-align:center;margin-top:10px;font-weight:600;color:#1a4d3e;\">भाववाचक संज्ञा = Abstract Noun</div>" }
       ]}
     ]}
@@ -1682,24 +1688,24 @@ const chapters_hindi_g5_cbse = [
       "<b>Rhyming words (तुकांत) \u2014 real examples from the book's own exercise, testing this poem's vocabulary specifically:</b> धूल rhymes with फूल; गिर rhymes with फिर."
     ],
     practice: [
-      {type:"short", marks:2, q:"बादलों की गोद से निकलकर बूँद क्या सोचने लगी? (After emerging from the clouds, what did the drop start thinking about?)", answer:"whether it would survive or be lost in the dust", explain:"The drop worries about its own fate — दैव! मेरे भाग्य में है क्या बदा — will it survive, or vanish into dust, or burn, or by chance land somewhere wonderful like a lotus?"},
-      {type:"short", marks:2, q:"सीप में गिरने पर बूँद का क्या हुआ? (What happened to the drop after it fell into the oyster shell?)", answer:["वह मोती बन गई","moti ban gayi"], explain:"The drop that fell into the open oyster shell (सीप) eventually became a pearl (मोती) — the poem's central image of an unexpected, beautiful outcome."},
+      {type:"short", marks:2, q:"बादलों की गोद से निकलकर बूँद क्या सोचने लगी?", qEN:"After emerging from the clouds, what did the drop start thinking about?", answer:"whether it would survive or be lost in the dust", explain:"The drop worries about its own fate — दैव! मेरे भाग्य में है क्या बदा — will it survive, or vanish into dust, or burn, or by chance land somewhere wonderful like a lotus?"},
+      {type:"short", marks:2, q:"सीप में गिरने पर बूँद का क्या हुआ?", qEN:"What happened to the drop after it fell into the oyster shell?", answer:["वह मोती बन गई","moti ban gayi"], explain:"The drop that fell into the open oyster shell (सीप) eventually became a pearl (मोती) — the poem's central image of an unexpected, beautiful outcome."},
       {type:"mcq", marks:1, q:"बूँद किसकी गोद से निकली?", options:["समंदर की","बादल की","सीप की","कमल की"], answer:1, explain:"The poem opens with the drop separating from the clouds — बादलों की गोद से निकलकर।"},
       {type:"mcq", marks:1, q:"'अंगारा' का अर्थ है:", options:["आग","दहकता कोयला","किसी ग्रह का नाम","आना"], answer:1, explain:"अंगारा means a burning/glowing coal ember — one of the frightening fates the drop imagines for itself."},
-      {type:"short", marks:2, q:"रिक्त स्थान भरें (Fill in with में or मैं, exactly as the poem does): \"___ बचूँगी या मिलूँगी धूल ___।\"", answer:["मैं...में","main...mein"], explain:"मैं (myself, will I survive) ... धूल में (in the dust) — the poem uses both words in the same line, each in its correct role."},
+      {type:"short", marks:2, q:"रिक्त स्थान भरें: \"___ बचूँगी या मिलूँगी धूल ___।\"", qEN:"Fill in the blanks with में or मैं, exactly as the poem does.", answer:["मैं...में","main...mein"], explain:"मैं (myself, will I survive) ... धूल में (in the dust) — the poem uses both words in the same line, each in its correct role."},
       {type:"mcq", marks:1, q:"\"बूँद ने सोचा ___ मैं अपना घर छोड़कर कहाँ जा रही हूँ?\" \u2014 सही शब्द चुनें।", options:["कि","की","के","कू"], answer:0, explain:"कि (ki) joins the reporting phrase (\"the drop thought\") to what she actually thought — exactly the real sentence from the book's practice exercise."},
       {type:"mcq", marks:1, q:"\"धूल\" शब्द के साथ तुकांत (rhyming) करने वाला शब्द कौन सा है?", options:["फूल","दूर","जाल"], answer:0, explain:"धूल और फूल दोनों -ूल ध्वनि पर समाप्त होते हैं — both end in the same \"-ool\" sound, making them rhyme."},
       {type:"mcq", marks:1, q:"\"गिर\" शब्द के साथ तुकांत (rhyming) करने वाला शब्द कौन सा है?", options:["चर","पर","फिर"], answer:2, explain:"गिर और फिर दोनों -इर ध्वनि पर समाप्त होते हैं, इसलिए ये तुकांत हैं — चर और पर की ध्वनि अलग है (-अर), इसलिए वे तुकांत नहीं हैं।"}
     ],
     watch: { lessons: [
       { title: "\u092e\u0947\u0902 vs \u092e\u0948\u0902", scenes: [
-        { caption: "ये दो शब्द देखने में एक जैसे लगते हैं, पर इनका अर्थ बिलकुल अलग है।",
+        { caption: "ये दो शब्द देखने में एक जैसे लगते हैं, पर इनका अर्थ बिलकुल अलग है।", translation: "These two words look similar, but their meaning is completely different.",
           html: "<div style=\"display:flex;gap:40px;justify-content:center;align-items:center;\"><div style=\"font-size:44px;font-weight:700;color:#1a4d3e;\">में</div><div style=\"font-size:20px;color:#999;\">vs</div><div style=\"font-size:44px;font-weight:700;color:#b5442e;\">मैं</div></div>" },
-        { caption: "में का अर्थ है किसी स्थान के अंदर, जैसे घर में।",
+        { caption: "में का अर्थ है किसी स्थान के अंदर, जैसे घर में।", translation: "में means inside a place, like घर में (in the house).",
           html: "<div style=\"text-align:center;\"><div style=\"font-size:32px;font-weight:700;color:#1a4d3e;\">घर <u>में</u></div><div style=\"font-size:15px;color:#666;margin-top:6px;\">= in the house <span style=\"color:#999;\">(a place)</span></div></div>" },
-        { caption: "मैं का प्रयोग स्वयं के लिए होता है, जैसे कविता की यह पंक्ति \u2014 मैं बचूँगी या मिलूँगी धूल में।",
+        { caption: "मैं का प्रयोग स्वयं के लिए होता है, जैसे कविता की यह पंक्ति \u2014 मैं बचूँगी या मिलूँगी धूल में।", translation: "मैं is used for oneself, like this line from the poem — will I survive, or be lost in the dust.",
           html: "<div style=\"text-align:center;\"><div style=\"font-size:26px;font-weight:700;color:#b5442e;\"><u>मैं</u> बचूँगी या मिलूँगी धूल <u style=\"color:#1a4d3e;\">में</u></div><div style=\"font-size:15px;color:#666;margin-top:6px;\">from the poem \u2014 both words, each in its place</div></div>" },
-        { caption: "याद रखें, अगर बात किसी स्थान की हो तो में, और अगर बात अपने बारे में हो तो मैं।",
+        { caption: "याद रखें, अगर बात किसी स्थान की हो तो में, और अगर बात अपने बारे में हो तो मैं।", translation: "Remember — if it's about a place, use में; if it's about yourself, use मैं.",
           html: "<div style=\"text-align:center;font-size:16px;line-height:1.8;\"><b style=\"color:#1a4d3e;\">Place?</b> → में &nbsp;&nbsp;|&nbsp;&nbsp; <b style=\"color:#b5442e;\">Yourself?</b> → मैं</div>" }
       ]}
     ]}
@@ -1718,8 +1724,8 @@ const chapters_hindi_g5_cbse = [
       "<b>Adverb (\u0915\u094d\u0930\u093f\u092f\u093e\u0935\u093f\u0936\u0947\u0937\u0923):</b> describes how/when/where \u2014 आज, धीरे-धीरे, बहुत."
     ],
     practice: [
-      {type:"short", marks:2, q:"नेल्सन मंडेला को किन-किन नामों से जाना जाता है? (By which names is Nelson Mandela known, according to the lesson?)", answer:["मदीबा और अफ़्रीका का गांधी","Madiba, Africa ka Gandhi"], explain:"The lesson calls him मदीबा (a respectful South African name meaning \"like a father\") and also \"अफ़्रीका का गांधी\" (the Gandhi of Africa) for his peaceful resistance."},
-      {type:"short", marks:2, q:"विमान में हलचल के दौरान मंडेला क्या कर रहे थे? (What was Mandela doing while there was panic on the plane?)", answer:["वे अखबार पढ़ रहे थे","akhbaar padh rahe the"], explain:"While Richard panicked about the propeller stopping, Madiba calmly continued reading his newspaper, showing no visible fear."},
+      {type:"short", marks:2, q:"नेल्सन मंडेला को किन-किन नामों से जाना जाता है?", qEN:"By which names is Nelson Mandela known, according to the lesson?", answer:["मदीबा और अफ़्रीका का गांधी","Madiba, Africa ka Gandhi"], explain:"The lesson calls him मदीबा (a respectful South African name meaning \"like a father\") and also \"अफ़्रीका का गांधी\" (the Gandhi of Africa) for his peaceful resistance."},
+      {type:"short", marks:2, q:"विमान में हलचल के दौरान मंडेला क्या कर रहे थे?", qEN:"What was Mandela doing while there was panic on the plane?", answer:["वे अखबार पढ़ रहे थे","akhbaar padh rahe the"], explain:"While Richard panicked about the propeller stopping, Madiba calmly continued reading his newspaper, showing no visible fear."},
       {type:"mcq", marks:1, q:"सही/गलत: मदीबा का गाँव गंगा नदी के किनारे बसा था।", options:["सही","गलत"], answer:1, explain:"This is गलत — the lesson states Mandela's village Mvezo was on the banks of the Mbashe river in South Africa, not the Ganga."},
       {type:"mcq", marks:1, q:"मदीबा का अर्थ होता है:", options:["माता","पिता के समान सम्मानीय","दादा","पिता"], answer:1, explain:"मदीबा is a respectful South African term meaning \"like a father, worthy of great respect\" — not literally \"father\"."},
       {type:"mcq", marks:1, q:"दक्षिण अफ़्रीका के पहले अश्वेत राष्ट्रपति कौन थे?", options:["रिचर्ड स्टेंगल","नेल्सन मंडेला","नेल्सन मंडेला के पिता","अब्राहम लिंकन"], answer:1, explain:"Nelson Mandela became South Africa's first Black president, as stated directly in the lesson."},
@@ -1727,13 +1733,13 @@ const chapters_hindi_g5_cbse = [
     ],
     watch: { lessons: [
       { title: "\u090f\u0915\u0935\u091a\u0928 \u2192 \u092c\u0939\u0941\u0935\u091a\u0928", scenes: [
-        { caption: "अंग्रेज़ी में हम शब्द के अंत में 's' जोड़ते हैं। हिंदी में यह नियम शब्द के लिंग पर भी निर्भर करता है।",
+        { caption: "अंग्रेज़ी में हम शब्द के अंत में 's' जोड़ते हैं। हिंदी में यह नियम शब्द के लिंग पर भी निर्भर करता है।", translation: "In English we add 's' at the end of a word. In Hindi, this rule also depends on the word's gender.",
           html: "<div style=\"text-align:center;font-size:20px;font-weight:600;color:#1a4d3e;\">एकवचन → बहुवचन</div><div style=\"text-align:center;font-size:14px;color:#999;margin-top:4px;\">Singular → Plural</div>" },
-        { caption: "पुल्लिंग शब्द जो आ से समाप्त होते हैं, उनका आ बदलकर ए हो जाता है। जैसे लड़का से लड़के।",
+        { caption: "पुल्लिंग शब्द जो आ से समाप्त होते हैं, उनका आ बदलकर ए हो जाता है। जैसे लड़का से लड़के।", translation: "Masculine words ending in आ change to ए. For example, लड़का becomes लड़के.",
           html: "<div style=\"display:flex;gap:20px;justify-content:center;align-items:center;\"><div style=\"font-size:26px;font-weight:700;\">लड़का</div><div style=\"font-size:20px;color:#999;\">→</div><div style=\"font-size:26px;font-weight:700;color:#1a4d3e;\">लड़के</div></div><div style=\"text-align:center;margin-top:8px;color:#666;\">boy → boys</div>" },
-        { caption: "स्त्रीलिंग शब्दों में सामान्यतः एँ जुड़ता है। जैसे किताब से किताबें।",
+        { caption: "स्त्रीलिंग शब्दों में सामान्यतः एँ जुड़ता है। जैसे किताब से किताबें।", translation: "Feminine words usually add एँ. For example, किताब becomes किताबें.",
           html: "<div style=\"display:flex;gap:20px;justify-content:center;align-items:center;\"><div style=\"font-size:26px;font-weight:700;\">किताब</div><div style=\"font-size:20px;color:#999;\">→</div><div style=\"font-size:26px;font-weight:700;color:#b5442e;\">किताबें</div></div><div style=\"text-align:center;margin-top:8px;color:#666;\">book → books</div>" },
-        { caption: "एक और उदाहरण देखें, लड़की से लड़कियाँ।",
+        { caption: "एक और उदाहरण देखें, लड़की से लड़कियाँ।", translation: "Let's see one more example — लड़की becomes लड़कियाँ.",
           html: "<div style=\"display:flex;gap:20px;justify-content:center;align-items:center;\"><div style=\"font-size:26px;font-weight:700;\">लड़की</div><div style=\"font-size:20px;color:#999;\">→</div><div style=\"font-size:26px;font-weight:700;color:#b5442e;\">लड़कियाँ</div></div><div style=\"text-align:center;margin-top:8px;color:#666;\">girl → girls</div>" }
       ]}
     ]}
@@ -1751,8 +1757,8 @@ const chapters_hindi_g5_cbse = [
       "<b>Adverb (क्रियाविशेषण) \u2014 real examples from the book:</b> गाड़ी धीरे-धीरे चलने लगी (slowly); हम दिनभर पढ़ते रहते हैं (all day); सबसे प्रेमपूर्वक बोलो (lovingly); नमन इधर-उधर टहल रहा है (here and there)."
     ],
     practice: [
-      {type:"short", marks:2, q:"युवक ने सबसे बड़ा वेतन किसे कहा और क्यों? (What did the young man call his greatest wage, and why?)", answer:["बादशाह की सेवा करने का मौका","raja ki seva karne ka mauka"], explain:"He said his biggest reward wasn't money at all, but the chance to serve the king — मेरे लिए सबसे बड़ा वेतन यह है कि मुझे अपने बादशाह की सेवा करने का मौका मिलेगा।"},
-      {type:"short", marks:2, q:"चुगलखोरों ने युवक को बादशाह की नज़रों से गिराने के लिए क्या किया? (What did the gossipers do to try to bring the young man into disfavour?)", answer:"complained to the king again and again with excuses, and accused him of wasting royal money on decorating the office", explain:"Jealous ministers kept complaining to the king with different excuses, including accusing him of wastefully spending royal money — though it turned out he'd earned that money honestly, from selling recovered valuables."},
+      {type:"short", marks:2, q:"युवक ने सबसे बड़ा वेतन किसे कहा और क्यों?", qEN:"What did the young man call his greatest wage, and why?", answer:["बादशाह की सेवा करने का मौका","raja ki seva karne ka mauka"], explain:"He said his biggest reward wasn't money at all, but the chance to serve the king — मेरे लिए सबसे बड़ा वेतन यह है कि मुझे अपने बादशाह की सेवा करने का मौका मिलेगा।"},
+      {type:"short", marks:2, q:"चुगलखोरों ने युवक को बादशाह की नज़रों से गिराने के लिए क्या किया?", qEN:"What did the gossipers do to try to bring the young man into disfavour?", answer:"complained to the king again and again with excuses, and accused him of wasting royal money on decorating the office", explain:"Jealous ministers kept complaining to the king with different excuses, including accusing him of wastefully spending royal money — though it turned out he'd earned that money honestly, from selling recovered valuables."},
       {type:"mcq", marks:1, q:"बादशाह ने युवक को किस पद पर रखा?", options:["गृहमंत्री के पद पर","सलाहकार के पद पर","चपरासी के पद पर","निजी सहायक के पद पर"], answer:2, explain:"He was initially hired for the lowest position — चपरासी (peon) — at a small wage of 15 rupees."},
       {type:"mcq", marks:1, q:"युवक को हिसाब में क्या गड़बड़ी लगी, जिस वजह से मंत्रियों की चोरी पकड़ी गई?", options:["खज़ाना गायब था","कोई ध्यान नहीं देता था","हिसाब लिखा नहीं गया था","एक पैसा कम था"], answer:3, explain:"The finance minister was found awake at 2am worrying over accounts because one paisa (a tiny amount) didn't add up — his honesty over even that small amount is what won the king's trust."},
       {type:"mcq", marks:1, q:"बादशाह ने युवक को अपना प्रधानमंत्री क्यों बनाया?", options:["सामान बेचने के कारण","कार्यालय सजाने के कारण","ईमानदारी और मेहनत के कारण","मंत्री का आदमी होने के कारण"], answer:2, explain:"The whole arc of the story is about honesty and hard work being rewarded — इस कहानी से यही संदेश मिलता है।"},
@@ -1760,13 +1766,13 @@ const chapters_hindi_g5_cbse = [
     ],
     watch: { lessons: [
       { title: "\u092d\u093e\u0935\u0935\u093e\u091a\u0915 \u0938\u0902\u091c\u094d\u091e\u093e \u092c\u0928\u093e\u0928\u093e", scenes: [
-        { caption: "एक विशेषण शब्द से भाववाचक संज्ञा कैसे बनती है, यह देखते हैं।",
+        { caption: "एक विशेषण शब्द से भाववाचक संज्ञा कैसे बनती है, यह देखते हैं।", translation: "Let's see how an abstract noun is formed from an adjective.",
           html: "<div style=\"text-align:center;font-size:20px;font-weight:600;color:#1a4d3e;\">विशेषण → भाववाचक संज्ञा</div><div style=\"text-align:center;font-size:14px;color:#999;margin-top:4px;\">Adjective → Abstract Noun</div>" },
-        { caption: "नम्र यानी विनम्र स्वभाव का। इसमें ता जोड़ने से बनता है नम्रता, यानी विनम्रता का गुण।",
+        { caption: "नम्र यानी विनम्र स्वभाव का। इसमें ता जोड़ने से बनता है नम्रता, यानी विनम्रता का गुण।", translation: "नम्र means humble in nature. Adding ता makes नम्रता, meaning the quality of humility.",
           html: "<div style=\"display:flex;gap:16px;justify-content:center;align-items:center;\"><div style=\"font-size:24px;font-weight:700;\">नम्र</div><div style=\"font-size:18px;color:#999;\">+</div><div style=\"font-size:24px;font-weight:700;color:#1a4d3e;\">ता</div><div style=\"font-size:18px;color:#999;\">=</div><div style=\"font-size:24px;font-weight:700;color:#b5442e;\">नम्रता</div></div><div style=\"text-align:center;margin-top:8px;color:#666;\">humble → humility</div>" },
-        { caption: "इसी तरह चतुर से बनता है चतुरता, यानी होशियारी का गुण।",
+        { caption: "इसी तरह चतुर से बनता है चतुरता, यानी होशियारी का गुण।", translation: "In the same way, चतुर becomes चतुरता, meaning the quality of cleverness.",
           html: "<div style=\"display:flex;gap:16px;justify-content:center;align-items:center;\"><div style=\"font-size:24px;font-weight:700;\">चतुर</div><div style=\"font-size:18px;color:#999;\">+</div><div style=\"font-size:24px;font-weight:700;color:#1a4d3e;\">ता</div><div style=\"font-size:18px;color:#999;\">=</div><div style=\"font-size:24px;font-weight:700;color:#b5442e;\">चतुरता</div></div><div style=\"text-align:center;margin-top:8px;color:#666;\">clever → cleverness</div>" },
-        { caption: "और मीठा से बनता है मिठास, यानी मीठेपन का गुण। ध्यान दीजिए, यहाँ रूप थोड़ा बदल जाता है।",
+        { caption: "और मीठा से बनता है मिठास, यानी मीठेपन का गुण। ध्यान दीजिए, यहाँ रूप थोड़ा बदल जाता है।", translation: "And मीठा becomes मिठास, meaning the quality of sweetness. Notice the form changes slightly here.",
           html: "<div style=\"display:flex;gap:16px;justify-content:center;align-items:center;\"><div style=\"font-size:24px;font-weight:700;\">मीठा</div><div style=\"font-size:18px;color:#999;\">→</div><div style=\"font-size:24px;font-weight:700;color:#b5442e;\">मिठास</div></div><div style=\"text-align:center;margin-top:8px;color:#666;\">sweet → sweetness</div>" }
       ]}
     ]}
@@ -1783,19 +1789,19 @@ const chapters_hindi_g5_cbse = [
       "<b>Spelling watch-list (शुद्ध वर्तनी) \u2014 real examples from the book:</b> आदर्श is correct (not आदर्स or आंदश); दूरदर्शिता is correct (not दूरद्रशिता); क्रिकेट is correct (not किकेट or किरकेट)."
     ],
     practice: [
-      {type:"short", marks:3, q:"एक सफल बल्लेबाज़ में क्या-क्या गुण होते हैं? (According to the lesson, what qualities does a successful batsman need?)", answer:"skill (kaushal), practice (abhyaas), discipline, and the ability to stay calm under pressure", explain:"The lesson connects cricket to real-life qualities — कौशल, अभ्यास, अनुशासन and विनम्रता all come up as the qualities the game develops and requires."},
-      {type:"short", marks:2, q:"'टीम-भावना' और 'खेल-भावना' का क्या अर्थ है? (What do \"team spirit\" and \"sporting spirit\" mean, based on the lesson?)", answer:"playing together for the team rather than for yourself, and accepting both victory and defeat gracefully", explain:"The lesson describes cricket as teaching अनुशासन and टीम-भावना — win or lose, a true sportsperson accepts the result with grace, which is सही खेल-भावना।"},
+      {type:"short", marks:3, q:"एक सफल बल्लेबाज़ में क्या-क्या गुण होते हैं?", qEN:"According to the lesson, what qualities does a successful batsman need?", answer:"skill (kaushal), practice (abhyaas), discipline, and the ability to stay calm under pressure", explain:"The lesson connects cricket to real-life qualities — कौशल, अभ्यास, अनुशासन and विनम्रता all come up as the qualities the game develops and requires."},
+      {type:"short", marks:2, q:"'टीम-भावना' और 'खेल-भावना' का क्या अर्थ है?", qEN:"What do \"team spirit\" and \"sporting spirit\" mean, based on the lesson?", answer:"playing together for the team rather than for yourself, and accepting both victory and defeat gracefully", explain:"The lesson describes cricket as teaching अनुशासन and टीम-भावना — win or lose, a true sportsperson accepts the result with grace, which is सही खेल-भावना।"},
       {type:"mcq", marks:1, q:"शताब्दी का सर्वश्रेष्ठ खिलाड़ी किसे घोषित किया गया?", options:["सचिन तेंदुलकर","महेंद्र सिंह धोनी","कपिल देव","सुनील गावस्कर"], answer:2, explain:"The lesson states Kapil Dev was declared \"शताब्दी का सर्वश्रेष्ठ खिलाड़ी\" (best player of the century)."},
       {type:"mcq", marks:1, q:"क्रिकेट मैच में विकेटकीपिंग कौन करता है?", options:["फ़ील्डर","गेंदबाज़","बल्लेबाज़","विकेटकीपर"], answer:3, explain:"Each team has one designated player who handles विकेटकीपिंग — the विकेटकीपर, stationed behind the batsman's wicket."},
       {type:"mcq", marks:1, q:"इनमें से सही वर्तनी (correct spelling) कौन सी है?", options:["किकेट","क्रिकेट","किरकेट","क्रिकेत"], answer:1, explain:"क्रिकेट is the correct spelling — from the lesson's own spelling exercise, testing exactly this word."}
     ],
     watch: { lessons: [
       { title: "\u092a\u0942\u0930\u094d\u0935\u0915 = \"-ly\"", scenes: [
-        { caption: "अंग्रेज़ी में 'ly' जोड़कर हम बताते हैं कि कोई काम कैसे किया गया। हिंदी में यह काम पूर्वक करता है।",
+        { caption: "अंग्रेज़ी में 'ly' जोड़कर हम बताते हैं कि कोई काम कैसे किया गया। हिंदी में यह काम पूर्वक करता है।", translation: "In English we add 'ly' to show how something was done. In Hindi, पूर्वक does this job.",
           html: "<div style=\"text-align:center;font-size:20px;font-weight:600;color:#1a4d3e;\">\"\u092a\u0942\u0930\u094d\u0935\u0915\" \u2014 Hindi's \"-ly\"</div>" },
-        { caption: "प्रशंसा में पूर्वक जोड़ने से बनता है प्रशंसापूर्वक, यानी प्रशंसा के साथ।",
+        { caption: "प्रशंसा में पूर्वक जोड़ने से बनता है प्रशंसापूर्वक, यानी प्रशंसा के साथ।", translation: "Adding पूर्वक to प्रशंसा makes प्रशंसापूर्वक, meaning \"with praise\".",
           html: "<div style=\"display:flex;gap:16px;justify-content:center;align-items:center;\"><div style=\"font-size:22px;font-weight:700;\">प्रशंसा</div><div style=\"font-size:18px;color:#999;\">+</div><div style=\"font-size:22px;font-weight:700;color:#1a4d3e;\">पूर्वक</div><div style=\"font-size:18px;color:#999;\">=</div><div style=\"font-size:22px;font-weight:700;color:#b5442e;\">प्रशंसापूर्वक</div></div><div style=\"text-align:center;margin-top:8px;color:#666;\">with praise</div>" },
-        { caption: "इसी तरह वीरता में पूर्वक जोड़ने से बनता है वीरतापूर्वक, यानी वीरता के साथ।",
+        { caption: "इसी तरह वीरता में पूर्वक जोड़ने से बनता है वीरतापूर्वक, यानी वीरता के साथ।", translation: "In the same way, adding पूर्वक to वीरता makes वीरतापूर्वक, meaning \"with bravery\".",
           html: "<div style=\"display:flex;gap:16px;justify-content:center;align-items:center;\"><div style=\"font-size:22px;font-weight:700;\">वीरता</div><div style=\"font-size:18px;color:#999;\">+</div><div style=\"font-size:22px;font-weight:700;color:#1a4d3e;\">पूर्वक</div><div style=\"font-size:18px;color:#999;\">=</div><div style=\"font-size:22px;font-weight:700;color:#b5442e;\">वीरतापूर्वक</div></div><div style=\"text-align:center;margin-top:8px;color:#666;\">bravely</div>" }
       ]}
     ]}
@@ -1814,8 +1820,8 @@ const chapters_hindi_g5_cbse = [
       "<b>Word pairs (शब्द-युग्म) from the book:</b> तरह-तरह (of various kinds); माता-पिता (parents)."
     ],
     practice: [
-      {type:"short", marks:2, q:"अंकन के पत्र का मुख्य उद्देश्य क्या था? (What was the main purpose of Ankan's letter?)", answer:["संजीव को सूरजकुंड मेला देखने के लिए दिल्ली आमंत्रित करना","to invite Sanjeev to see the Surajkund fair"], explain:"Ankan writes specifically to invite his friend Sanjeev to Delhi to see the सूरजकुंड हस्तशिल्प मेला (Surajkund handicraft fair)."},
-      {type:"short", marks:2, q:"मेले में अलग-अलग पंडाल किसके थे? (What were the different pavilions at the fair for?)", answer:["भारत के अलग-अलग राज्यों के हस्तशिल्प कलाकारों के","different Indian states' craftspeople"], explain:"The letter describes pavilions from Punjab, Rajasthan, Maharashtra, Kerala, Gujarat and other states, each showing their own handicrafts — a display of unity in diversity."},
+      {type:"short", marks:2, q:"अंकन के पत्र का मुख्य उद्देश्य क्या था?", qEN:"What was the main purpose of Ankan's letter?", answer:["संजीव को सूरजकुंड मेला देखने के लिए दिल्ली आमंत्रित करना","to invite Sanjeev to see the Surajkund fair"], explain:"Ankan writes specifically to invite his friend Sanjeev to Delhi to see the सूरजकुंड हस्तशिल्प मेला (Surajkund handicraft fair)."},
+      {type:"short", marks:2, q:"मेले में अलग-अलग पंडाल किसके थे?", qEN:"What were the different pavilions at the fair for?", answer:["भारत के अलग-अलग राज्यों के हस्तशिल्प कलाकारों के","different Indian states' craftspeople"], explain:"The letter describes pavilions from Punjab, Rajasthan, Maharashtra, Kerala, Gujarat and other states, each showing their own handicrafts — a display of unity in diversity."},
       {type:"mcq", marks:1, q:"सूरजकुंड में किस मेले का आयोजन किया जाता है?", options:["पुस्तक मेले का","हस्तशिल्प मेले का","दीवाली मेले का","सावन मेले का"], answer:1, explain:"The Surajkund fair is specifically a हस्तशिल्प मेला (handicraft fair), as the letter describes in detail."},
       {type:"mcq", marks:1, q:"इनमें से कौन-सी चीज़ इस मेले में नहीं होती है?", options:["मिट्टी के खिलौने","ताँबे की बनी वस्तुएँ","पत्थर की बनी मूर्तियाँ","इलेक्ट्रॉनिक वस्तुएँ"], answer:3, explain:"The letter describes traditional handicrafts — clay toys, copper items, stone sculptures — with no mention of electronic goods, which don't fit a handicraft fair."},
       {type:"short", marks:2, q:"वाक्य पूरा करें: \"हमें घर आए अतिथि को ___ करना चाहिए।\" (सही समश्रुत भिन्नार्थक शब्द चुनें: प्रणाम या प्रमाण)", answer:["प्रणाम","pranaam"], explain:"प्रणाम (a respectful greeting) fits here — प्रमाण (proof/evidence) would not make sense in this sentence, even though the two words sound almost identical."},
@@ -1823,13 +1829,13 @@ const chapters_hindi_g5_cbse = [
     ],
     watch: { lessons: [
       { title: "\u0938\u092e\u0936\u094d\u0930\u0941\u0924 \u092d\u093f\u0928\u094d\u0928\u093e\u0930\u094d\u0925\u0915 \u2014 Homophones", scenes: [
-        { caption: "कुछ शब्द सुनने में एक जैसे लगते हैं, पर उनका अर्थ बिलकुल अलग होता है।",
+        { caption: "कुछ शब्द सुनने में एक जैसे लगते हैं, पर उनका अर्थ बिलकुल अलग होता है।", translation: "Some words sound alike, but their meanings are completely different.",
           html: "<div style=\"text-align:center;font-size:20px;font-weight:600;color:#1a4d3e;\">Sound the same, mean different things</div>" },
-        { caption: "प्रणाम का अर्थ है सम्मान से किया गया अभिवादन। जैसे, हमें घर आए अतिथि को प्रणाम करना चाहिए।",
+        { caption: "प्रणाम का अर्थ है सम्मान से किया गया अभिवादन। जैसे, हमें घर आए अतिथि को प्रणाम करना चाहिए।", translation: "प्रणाम means a respectful greeting. For example, we should greet a guest at home with प्रणाम.",
           html: "<div style=\"text-align:center;\"><div style=\"font-size:30px;font-weight:700;\">प्रणाम</div><div style=\"font-size:15px;color:#666;margin-top:6px;\">= a respectful greeting</div></div>" },
-        { caption: "प्रमाण का अर्थ है सबूत। जैसे, प्रमाण के आधार पर चोर को सज़ा हुई।",
+        { caption: "प्रमाण का अर्थ है सबूत। जैसे, प्रमाण के आधार पर चोर को सज़ा हुई।", translation: "प्रमाण means proof. For example, the thief was punished based on प्रमाण (proof).",
           html: "<div style=\"text-align:center;\"><div style=\"font-size:30px;font-weight:700;color:#b5442e;\">प्रमाण</div><div style=\"font-size:15px;color:#666;margin-top:6px;\">= proof, evidence</div></div>" },
-        { caption: "इसलिए ऐसे शब्दों को वाक्य के अर्थ के अनुसार पहचानना बहुत ज़रूरी है।",
+        { caption: "इसलिए ऐसे शब्दों को वाक्य के अर्थ के अनुसार पहचानना बहुत ज़रूरी है।", translation: "So it's very important to recognize such words based on the sentence's meaning.",
           html: "<div style=\"text-align:center;font-size:16px;color:#1a4d3e;font-weight:600;\">Let the sentence's meaning guide you</div>" }
       ]}
     ]}
@@ -1852,13 +1858,13 @@ const chapters_hindi_g5_cbse = [
     ],
     watch: { lessons: [
       { title: "Formal Letter \u2014 The Fixed Shape", scenes: [
-        { caption: "औपचारिक पत्र हमेशा एक ही ढाँचे में लिखा जाता है। इसे एक टेम्पलेट की तरह याद रखिए।",
+        { caption: "औपचारिक पत्र हमेशा एक ही ढाँचे में लिखा जाता है। इसे एक टेम्पलेट की तरह याद रखिए।", translation: "A formal letter is always written in the same structure. Remember it like a template.",
           html: "<div style=\"text-align:center;font-size:20px;font-weight:600;color:#1a4d3e;\">औपचारिक पत्र \u2014 the fixed template</div>" },
-        { caption: "पत्र की शुरुआत हमेशा सेवा में से होती है, फिर प्राप्तकर्ता का पदनाम आता है।",
+        { caption: "पत्र की शुरुआत हमेशा सेवा में से होती है, फिर प्राप्तकर्ता का पदनाम आता है।", translation: "The letter always begins with सेवा में, followed by the recipient's designation.",
           html: "<div style=\"text-align:left;max-width:320px;margin:0 auto;font-size:16px;line-height:1.8;\"><b style=\"color:#1a4d3e;\">सेवा में,</b><br>&nbsp;&nbsp;&nbsp;&nbsp;प्रधानाचार्य महोदया,<br>&nbsp;&nbsp;&nbsp;&nbsp;[स्कूल का नाम]</div>" },
-        { caption: "इसके बाद एक स्पष्ट विषय पंक्ति लिखी जाती है, जो बताती है कि पत्र किस बारे में है।",
+        { caption: "इसके बाद एक स्पष्ट विषय पंक्ति लिखी जाती है, जो बताती है कि पत्र किस बारे में है।", translation: "After that, a clear subject line is written, stating what the letter is about.",
           html: "<div style=\"text-align:center;font-size:18px;font-weight:600;color:#b5442e;\">विषय: [एक स्पष्ट पंक्ति]</div>" },
-        { caption: "पत्र का समापन हमेशा धन्यवाद सहित से होता है, फिर हस्ताक्षर आता है।",
+        { caption: "पत्र का समापन हमेशा धन्यवाद सहित से होता है, फिर हस्ताक्षर आता है।", translation: "The letter always closes with धन्यवाद सहित, followed by the signature.",
           html: "<div style=\"text-align:left;max-width:320px;margin:0 auto;font-size:16px;line-height:1.8;\"><b style=\"color:#1a4d3e;\">धन्यवाद सहित</b><br><br>आपकी आज्ञाकारी शिष्या,<br>[नाम], कक्षा 5</div>" }
       ]}
     ]}
@@ -2668,7 +2674,7 @@ function renderWatchHTML(chapter){
     <div class="watch-card">
       <div class="watch-lesson-title">${lesson.title}</div>
       <div class="watch-stage" id="watchStage">${scene.html}</div>
-      <div class="watch-caption" id="watchCaption">${scene.caption}</div>
+      <div class="watch-caption" id="watchCaption">${scene.caption}${scene.translation ? `<div class="watch-translation">${scene.translation}</div>` : ''}</div>
       <div class="watch-controls">
         <button class="watch-icon-btn" id="wPrev" title="Previous" ${ws.sceneIndex===0?'disabled':''}>&#8592;</button>
         <button class="watch-icon-btn primary" id="wPlay" title="Play/Pause">${ws.playing?'&#10073;&#10073;':'&#9654;'}</button>
@@ -3084,12 +3090,18 @@ function renderQuestion(chapterId, q, idx){
         <span class="clue-toggle" data-clue-toggle="${qid}">\uD83D\uDCA1 Need a clue?</span>
         <div class="clue-text" id="clue-${qid}">${q.clue}</div>
       </div>` : '';
+  const meaningBlock = q.qEN ? `
+      <div class="meaning-block">
+        <span class="meaning-toggle" data-meaning-toggle="${qid}">\uD83C\uDF10 अर्थ देखें (See meaning)</span>
+        <div class="meaning-text" id="meaning-${qid}">${q.qEN}</div>
+      </div>` : '';
   return `<div class="q-card" data-qcard="${qid}">
       <div class="q-meta">
         <span class="q-tag ${isHots?'hots':''} ${q.type==='ar'?'ar-tag':''}">${isHots?'HOTS · beyond textbook':(q.type==='ar'?'Assertion-Reason':'Practice')}</span>
         <span class="q-marks">${q.marks} mark${q.marks>1?'s':''}</span>
       </div>
       ${q.type==='ar' ? questionText : `<div class="q-text">${idx+1}. ${questionText}</div>`}
+      ${meaningBlock}
       ${clueBlock}
       ${body}
       <div class="feedback" id="fb-${qid}"></div>
@@ -3100,6 +3112,17 @@ function wireQuestionInteractions(chapter){
   chapter.practice.forEach((q, idx) => {
     const qid = chapter.id+'-'+idx;
     const sc = state.scores[chapter.id];
+
+    if(q.qEN){
+      const mtoggle = document.querySelector(`[data-meaning-toggle="${qid}"]`);
+      if(mtoggle){
+        mtoggle.addEventListener('click', ()=>{
+          const box = document.getElementById(`meaning-${qid}`);
+          box.classList.toggle('show');
+          mtoggle.textContent = box.classList.contains('show') ? '\uD83C\uDF10 अर्थ छुपाएँ (Hide meaning)' : '\uD83C\uDF10 अर्थ देखें (See meaning)';
+        });
+      }
+    }
 
     if(q.clue){
       const toggle = document.querySelector(`[data-clue-toggle="${qid}"]`);
