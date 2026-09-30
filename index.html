@@ -3528,7 +3528,7 @@ function renderMockTestSetup(){
   ` : `
         <div class="radio-opt ${state.mockLevel==='class'?'on':''}" data-lvl="class"><b>Quick Practice — 20 marks</b>45 minutes · Parts A–D</div>
         <div class="radio-opt ${state.mockLevel==='term'?'on':''}" data-lvl="term"><b>Periodic Test — 40 marks</b>1½ hours · Matches the real DAV Periodic Test format</div>
-        <div class="radio-opt ${state.mockLevel==='fullterm'?'on':''}" data-lvl="fullterm"><b>Full Term Exam — 100 marks</b>2½ hours · Larger paper, same Part A–D structure scaled up</div>
+        <div class="radio-opt ${state.mockLevel==='fullterm'?'on':''}" data-lvl="fullterm"><b>Full Term Exam — 80 marks</b>2½ hours · Matches the real DAV Term Exam format (confirmed against her actual Term-1 paper)</div>
   `;
   content.innerHTML = `
     <div class="setup-card">
@@ -3580,17 +3580,18 @@ function shuffle(arr){
 }
 
 function generatePaper(){
-  const multByLevel = { class: 1, term: 2, fullterm: 5 };
+  const multByLevel = { class: 1, term: 2, fullterm: 4 };
   const mult = multByLevel[state.mockLevel] || 1;
   const selected = chapters.filter(c=>state.mockChapters.includes(c.id));
   const pool = selected.flatMap(c=>c.practice.map(q=>({...q, chapter:c.title})));
 
-  // Calibrated to match a real DAV Periodic Test paper: Part A is objective
-  // questions worth half a mark each, then Parts B/C/D step up through 2, 3
-  // and 4-mark questions. At mult=2 this gives 8+4+4+4=20 questions for
-  // 40 marks (the confirmed real Periodic Test); mult=1 halves that for a
-  // shorter Quick Practice; mult=5 scales it up to the 100-mark Full Term
-  // Exam (20+10+10+10=50 questions) — same shape, bigger paper.
+  // Calibrated to match real DAV exam papers: Part A is objective questions
+  // worth half a mark each, then Parts B/C/D step up through 2, 3 and 4-mark
+  // questions. At mult=2 this gives 8+4+4+4=20 questions for 40 marks (the
+  // confirmed real Periodic Test); mult=1 halves that for a shorter Quick
+  // Practice; mult=4 gives 16+8+8+8=40 questions for 80 marks — confirmed
+  // directly against Kayalini's actual Term-1 exam paper (30.09.2026),
+  // which totalled exactly 80 marks across exactly this question count.
   const byMarks = m => shuffle(pool.filter(q=>q.marks===m));
   const wantA = 4*mult, wantB = 2*mult, wantC = 2*mult, wantD = 2*mult;
   const secA = byMarks(1).slice(0, wantA);
